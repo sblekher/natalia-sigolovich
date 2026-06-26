@@ -14,7 +14,6 @@ const C = {
       cta: "Записаться",
       links: [
         { label: "Обо мне", href: "#about" },
-        { label: "Подход", href: "#approach" },
         { label: "Услуги", href: "#services" },
         { label: "Отзывы", href: "#reviews" },
         { label: "Вопросы", href: "#faq" },
@@ -90,36 +89,6 @@ const C = {
         { title: "Структура и спокойствие",text:"Построим понятную систему без оценок и осуждения, с уважением к вашей реальности.",                                      color: "lavender" },
       ],
     },
-    approach: {
-      eyebrow: "Подход",
-      title: "Как я работаю",
-      leadTitle: "Я не «исправляю» детей — я сопровождаю родителей",
-      lead: [
-        "Я работаю с родителями.",
-        "Потому что дети меняются, когда меняется то, что происходит рядом с ними.",
-        "В основе моей работы — эмоциональный интеллект: умение замечать, что происходит внутри, останавливаться и выбирать реакцию. Не действовать на автопилоте.",
-      ],
-      principles: [
-        { title: "Диалог на равных",    text: "Я не оцениваю вас как родителя. Мы работаем вместе как партнёры, а не как учитель и ученик." },
-        { title: "Принятие без оценки", text: "Здесь нет правильных и неправильных родителей. Есть уставшие люди в сложных ситуациях и есть работающие инструменты." },
-        { title: "Обучение без давления",text:"Я методолог и специалист по обучению взрослых. Моя задача — помочь освоить конкретные действия, которые работают в реальной жизни." },
-      ],
-      notTitle: "Чего в моей работе нет",
-      not: [
-        "Криков, наказаний, давления и запугивания",
-        "Работы через вину, стыд или оценку",
-        "Универсальных советов без учёта вашей конкретной семьи",
-        "Обещаний быстрых результатов",
-        "«Исправления» ребёнка",
-      ],
-      resultTitle: "Как выглядит результат",
-      result: [
-        "Дома становится тише. Не потому что ребёнок «стал лучше вести себя», а потому что изменилась атмосфера.",
-        "Вы начинаете понимать, почему ребёнок реагирует именно так.",
-        "У вас появляются конкретные действия для кризисных моментов вместо растерянности.",
-        "Вы перестаёте срываться так часто. И когда срываетесь, знаете, как из этого выйти.",
-      ],
-    },
     formats: {
       eyebrow: "Форматы работы",
       title: "Форматы работы",
@@ -187,7 +156,6 @@ const C = {
       cta: "לקביעת תור",
       links: [
         { label: "אודות",    href: "#about"    },
-        { label: "גישה",    href: "#approach"  },
         { label: "שירותים", href: "#services"  },
         { label: "המלצות",  href: "#reviews"   },
         { label: "שאלות",   href: "#faq"       },
@@ -263,36 +231,7 @@ const C = {
         { title: "מבנה ושקט",        text: "נבנה מערכת ברורה, ללא שיפוטיות, עם כבוד למציאות שלכם.",                          color: "lavender" },
       ],
     },
-    approach: {
-      eyebrow: "גישה",
-      title: "איך אני עובדת",
-      leadTitle: "אני לא \"מתקנת\" ילדים — אני מלווה הורים",
-      lead: [
-        "אני עובדת עם הורים.",
-        "כי ילדים משתנים, כשמשתנה מה שקורה לידם.",
-        "הבסיס של העבודה שלי — אינטליגנציה רגשית: היכולת לשים לב למה שקורה בפנים, לעצור ולבחור תגובה. לא לפעול על אוטומט.",
-      ],
-      principles: [
-        { title: "דיאלוג בין שווים",   text: "אני לא שופטת אתכם כהורים. אנחנו עובדים יחד כשותפים, לא כמורה ותלמיד." },
-        { title: "קבלה ללא שיפוטיות", text: "אין כאן הורים נכונים ולא נכונים. יש אנשים עייפים במצבים קשים ויש כלים שעובדים." },
-        { title: "למידה ללא לחץ",     text: "אני מתודולוגית ומומחית להכשרת מבוגרים. המטרה שלי — לעזור לרכוש פעולות קונקרטיות שעובדות בחיים האמיתיים." },
-      ],
-      notTitle: "מה אין בעבודה שלי",
-      not: [
-        "צעקות, ענישה, לחץ והפחדה",
-        "עבודה דרך אשמה, בושה או שיפוט",
-        "עצות כלליות בלי התחשבות במשפחה הספציפית שלכם",
-        "הבטחות לתוצאות מהירות",
-        "\"תיקון\" הילד",
-      ],
-      resultTitle: "איך נראית התוצאה",
-      result: [
-        "בבית נהיה שקט יותר. לא כי הילד \"השתפר\", אלא כי האווירה השתנתה.",
-        "אתם מתחילים להבין למה הילד מגיב כך.",
-        "יש לכם פעולות קונקרטיות לרגעי משבר, במקום אבדן עשתונות.",
-        "אתם מתפרצים פחות. וכשזה קורה, יודעים איך לצאת מזה.",
-      ],
-    },
+
     formats: {
       eyebrow: "פורמטים",
       title: "פורמטי עבודה",
@@ -654,36 +593,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ══ APPROACH ══ */}
-      <section id="approach" style={{ padding: "clamp(56px,9vw,104px) 0", background: "#f5edd8" }}>
-        <div style={mw}>
-          {/* Section header */}
-          <div className="io-up" style={{ maxWidth: 680, marginBottom: "clamp(32px,5vw,52px)", textAlign: "start" }}>
-            <h2 style={{ margin: "0 0 0", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(28px,4.8vw,46px)", lineHeight: 1.08, letterSpacing: "-1.2px", color: "#0a0a0a", textAlign: "start" }}>{t.approach.title}</h2>
-          </div>
-
-          {/* Lead dark card */}
-          <div className="io-up" style={{ background: "#1a3a3a", borderRadius: 24, padding: "clamp(28px,4vw,48px)", marginBottom: "clamp(24px,4vw,32px)" }}>
-            <h3 style={{ margin: "0 0 24px", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(22px,4vw,32px)", lineHeight: 1.15, letterSpacing: "-0.5px", color: "#ffffff", textAlign: "start" }}>{t.approach.leadTitle}</h3>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "clamp(24px,4vw,32px)" }}>
-               {t.approach.lead.map((p, i) => (
-                 <p key={i} style={{ margin: 0, fontSize: 14, lineHeight: 1.6, color: "rgba(255,255,255,0.85)", textAlign: "start" }}>{p}</p>
-               ))}
-            </div>
-          </div>
-
-          {/* Principle cards */}
-          <div className="io-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(220px, 100%), 1fr))", gap: 18, marginBottom: "clamp(48px,7vw,72px)" }}>
-            {t.approach.principles.map((pr, i) => (
-              <div key={i} className="io-card" style={{ background: "#fffaf0", borderRadius: 16, padding: "26px 24px 28px", "--d": `${i * 80}ms` } as React.CSSProperties}>
-                <h4 style={{ margin: "0 0 10px", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: 17, letterSpacing: "-0.2px", color: "#0a0a0a", textAlign: "start" }}>{pr.title}</h4>
-                <p style={{ margin: 0, fontSize: 14, lineHeight: 1.65, color: "#6a6a6a", textAlign: "start" }}>{pr.text}</p>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
 
       {/* ══ FORMATS ══ */}
       <section id="services" style={{ padding: "clamp(52px,8vw,96px) 0", background: "#fffaf0" }}>

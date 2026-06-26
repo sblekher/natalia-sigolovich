@@ -344,7 +344,7 @@ body {
   .hero-section {
     min-height: 100svh !important;
     padding-top: 80px !important; /* Space for navbar */
-    padding-bottom: 32px !important;
+    padding-bottom: 96px !important; /* Clear floating widgets */
     display: flex !important;
     flex-direction: column;
     justify-content: flex-end;
@@ -363,6 +363,10 @@ body {
   .hero-cta { width: 100% !important; justify-content: center; background: #E05C2A !important; color: #ffffff !important; border-radius: 50px !important; box-shadow: 0 4px 16px rgba(224,92,42,0.4) !important; border: none !important; margin-bottom: 16px !important; }
   .hero-micro { color: rgba(255,255,255,0.6) !important; text-shadow: 0 1px 6px rgba(0,0,0,0.4) !important; text-align: center; margin-top: 0 !important; font-size: 13px !important; }
   [lang="he"] .hero-h1 { font-size: 40px !important; }
+  
+  .hero-badge { background: rgba(255,255,255,0.15) !important; }
+  .hero-badge-text { color: #ffffff !important; text-shadow: 0 1px 4px rgba(0,0,0,0.5) !important; }
+  .ns-header { position: fixed !important; width: 100%; }
 
   /* Requests */
   .requests-illus { display: none; }

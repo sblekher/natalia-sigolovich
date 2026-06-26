@@ -212,7 +212,7 @@ const C = {
       ],
     },
     about: {
-      eyebrow: "אודות",
+      eyebrow: "מי אני",
       title: "נטליה סיגולוביץ׳",
       subtitle: "יועצת ליחסי הורים-ילדים בגישת האינטליגנציה הרגשית",
       who: [
@@ -618,6 +618,7 @@ export default function Page() {
               <div className="about-eyebrow about-eyebrow-right">
                 <Eyebrow>{t.about.eyebrow}</Eyebrow>
               </div>
+              <h2 className="about-name-right" style={{ margin: "10px 0 24px", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(28px,4.4vw,42px)", lineHeight: 1.1, letterSpacing: "-1.2px", color: "#0a0a0a" }}>{t.about.title}</h2>
               <div className="about-bio">
                 {t.about.who.map((p, i) => <p key={i}>{p}</p>)}
               </div>

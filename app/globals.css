@@ -432,7 +432,9 @@ body {
   margin: 0 0 6px;
   z-index: 2;
   position: relative;
+  display: none; /* hidden on desktop — shown via about-name-right */
 }
+.about-name-right { display: block; }
 
 .about-subtitle {
   font-size: 14px;
@@ -524,6 +526,8 @@ body {
 
   .about-eyebrow-left { display: block; text-align: center; margin-bottom: 16px; }
   .about-eyebrow-right { display: none; }
+  .about-name { display: block; }
+  .about-name-right { display: none; }
 }
 
 /* Reviews carousel */

@@ -554,7 +554,6 @@ export default function Page() {
       <section className="hero-section" style={{ position: "relative", overflow: "hidden" }}>
         <div className="hero-grid" style={mw}>
           <div className="hero-stagger">
-            <div style={{ display: "inline-flex", marginBottom: 24 }}><Badge tone="mint" uppercase>{t.hero.badge}</Badge></div>
             <h1 className="hero-h1" style={{ margin: "0 0 20px", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 700, fontSize: 56, lineHeight: 1.08, letterSpacing: "-0.02em", color: "#0a0a0a" }}>{t.hero.title}</h1>
             <p className="hero-sub" style={{ margin: "0 0 36px", fontSize: 17, lineHeight: 1.65, color: "#4a4a4a", maxWidth: 420 }}>{t.hero.subtitle}</p>
             <a href="#contacts" className="btn btn-primary btn-lg hero-cta" style={{ marginBottom: 16 }}>{t.hero.cta}</a>
@@ -684,29 +683,6 @@ export default function Page() {
             ))}
           </div>
 
-          {/* Not / Result split - directly on background */}
-          <div className="io-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(260px, 100%), 1fr))", gap: "clamp(32px,5vw,56px)" }}>
-            <div>
-              <h3 style={{ margin: "0 0 20px", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: 17, letterSpacing: "-0.2px", color: "#0a0a0a", textAlign: "start" }}>{t.approach.notTitle}</h3>
-              <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 13 }}>
-                {t.approach.not.map((n, i) => (
-                  <li key={i} style={{ display: "flex", gap: 11, alignItems: "flex-start", fontSize: 14, lineHeight: 1.6, color: "#5a5a5a", textAlign: "start" }}>
-                    <span style={{ flexShrink: 0, width: 20, height: 20, borderRadius: "50%", background: "rgba(235,90,70,0.12)", color: "#d6503c", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 11, marginTop: 1 }}>✕</span>{n}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 style={{ margin: "0 0 20px", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: 17, letterSpacing: "-0.2px", color: "#0a0a0a", textAlign: "start" }}>{t.approach.resultTitle}</h3>
-              <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 13 }}>
-                {t.approach.result.map((r, i) => (
-                  <li key={i} style={{ display: "flex", gap: 11, alignItems: "flex-start", fontSize: 14, lineHeight: 1.6, color: "#5a5a5a", textAlign: "start" }}>
-                    <span style={{ flexShrink: 0, width: 20, height: 20, borderRadius: "50%", background: "#d8ece3", color: "#2f7a5e", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 11, marginTop: 1 }}>✓</span>{r}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
         </div>
       </section>
 

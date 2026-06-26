@@ -253,9 +253,9 @@ body {
 
 /* Section */
 .hero-section {
-  min-height: calc(100vh - 72px);
-  padding-top: 0;
-  padding-bottom: 72px;
+  min-height: unset;
+  padding-top: clamp(40px, 6vw, 72px);
+  padding-bottom: clamp(40px, 6vw, 72px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -341,11 +341,11 @@ body {
 
 @media (max-width: 768px) {
   /* Hero mobile — text first, illustration below */
-  .hero-section { min-height: unset; padding-top: 20px; padding-bottom: 48px; display: block; }
+  .hero-section { min-height: unset; padding-top: 20px; padding-bottom: 16px; display: block; }
   .hero-grid { grid-template-columns: 1fr; }
   .hero-stagger { order: 1; }
   .hero-slot { order: 2; }
-  .hero-illus { aspect-ratio: unset; overflow: visible; width: 68%; max-width: 260px; margin: 24px auto 0; display: block; }
+  .hero-illus { aspect-ratio: unset; overflow: visible; width: 58%; max-width: 220px; margin: 12px auto 0; display: block; }
   .hero-illus img { width: 100%; height: auto !important; max-height: none; object-fit: unset; }
   .hero-h1 { font-size: 36px !important; line-height: 1.1 !important; letter-spacing: -0.01em !important; margin-bottom: 16px !important; }
   .hero-sub { font-size: 16px !important; line-height: 1.6 !important; max-width: 100% !important; margin-bottom: 28px !important; }

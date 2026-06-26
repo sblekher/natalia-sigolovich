@@ -369,6 +369,19 @@ body {
   .hero-badge-text { color: #ffffff !important; text-shadow: 0 1px 4px rgba(0,0,0,0.5) !important; }
   .ns-header { position: fixed !important; width: 100%; }
 
+  .scroll-indicator-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    right: 0;
+    color: rgba(255,255,255,0.6);
+    animation: bounce-down 2s infinite ease-in-out;
+    pointer-events: none;
+  }
+
   /* Requests */
   .requests-illus { display: none; }
   .requests-cards { grid-template-columns: 1fr; }
@@ -587,6 +600,13 @@ body {
 .brand-text { color: #0a0a0a; transition: color 0.3s, text-shadow 0.3s; }
 .lang-btn-active { color: #0a0a0a; transition: color 0.3s, text-shadow 0.3s; }
 .lang-btn-inactive { color: #9a9a9a; transition: color 0.3s, text-shadow 0.3s; }
+
+/* Mobile Scroll Indicator */
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+.scroll-indicator-mobile { display: none; }
 .lang-divider { color: #c8c2b4; transition: color 0.3s; }
 .ns-burger { background: #fffaf0; border: 1px solid rgba(10,10,10,0.1); transition: background 0.3s, border 0.3s; }
 .ns-burger span { background: #0a0a0a; box-shadow: 0 -5px 0 #0a0a0a, 0 5px 0 #0a0a0a; transition: background 0.3s, box-shadow 0.3s; }

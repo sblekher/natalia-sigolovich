@@ -167,7 +167,7 @@ const C = {
       title: "יחסים עם הילדים",
       subtitle: "אני עוזרת להורים לילדים בגילאי 2 עד 9 לשמור על רוגע ולבחור את התגובה ברגעים הקשים ביותר.",
       cta: "לקביעת ייעוץ",
-      reassurance: "ייעוץ אבחוני · חינם · 30 דקות",
+      reassurance: "ייעוץ אבחוני · ללא עלות · 30 דקות",
     },
     requests: {
       eyebrow: "עם מה פונים",
@@ -199,7 +199,7 @@ const C = {
         "מחנכת עם למעלה מ-20 שנות ניסיון בעבודה עם ילדים ומשפחות בחינוך פורמלי ובלתי פורמלי.",
         "מנחת הורים מוסמכת לגיל הרך בגישת האינטליגנציה הרגשית (ישראל).",
         "הכשרה מקצועית בתחום ADHD וילדים נוירו-שונים.",
-        "מתודולוגית ומומחית לפורמטים מכווני-מיומנויות בהכשרת מבוגרים.",
+        "מתודולוגית ומומחית לחבילות מכוונות-מיומנויות בהכשרת מבוגרים.",
       ],
       expTitle: "ניסיון עבודה",
       exp: [
@@ -233,18 +233,18 @@ const C = {
     },
 
     formats: {
-      eyebrow: "פורמטים",
-      title: "פורמטי עבודה",
-      subtitle: "כל הפורמטים — אונליין. עובדת רק עם הורים.",
-      before: "העבודה שלי אינה עצות חד-פעמיות. זהו תהליך שבו אתם רוכשים מיומנויות קונקרטיות ומיישמים אותן בחיי המשפחה. לא בטוחים איזה פורמט מתאים? כתבו לי, נבין יחד.",
+      eyebrow: "חבילות",
+      title: "חבילות",
+      subtitle: "כל החבילות — אונליין. עובדת רק עם הורים.",
+      before: "העבודה שלי אינה עצות חד-פעמיות. זהו תהליך שבו אתם רוכשים מיומנויות קונקרטיות ומיישמים אותן בחיי המשפחה. לא בטוחים איזו חבילה מתאימה? כתבו לי, נבין יחד.",
       formatCta: "לקביעת תור",
       recommendedLabel: "עבודה עמוקה",
       cards: [
-        { name: "ייעוץ אבחוני",  price: "חינם",   period: "· 30 דקות",  description: "אם רוצים להבין מהיכן להתחיל ולראות אם אנחנו מתאימים זה לזה.", features: ["ניתוח הפנייה שלכם בזום","זיהוי \"נקודות עיוורון\" במצב","רשימת תיוג לצעדים ראשונים","הבנה איזה פורמט עבודה מתאים"], featured: false },
+        { name: "ייעוץ אבחוני",  price: "ללא עלות",   period: "· 30 דקות",  description: "אם רוצים להבין מהיכן להתחיל ולראות אם אנחנו מתאימים זה לזה.", features: ["ניתוח הפנייה שלכם בזום","זיהוי \"נקודות עיוורון\" במצב","רשימת תיוג לצעדים ראשונים","הבנה איזו חבילה מתאימה"], featured: false },
         { name: "שבוע ליווי",    price: "$285",    period: "· שבוע אחד", description: "אם רוצים לנסות שינויים בחיים האמיתיים, עם תמיכה לצדכם, אבל בלי תהליך ארוך.", features: ["2 ייעוצים בזום","מסלול אישי לשבוע","רשימת תיוג לניהול נסיגות והתנגדויות","שאלות ותשובות בצ׳אט אישי"], featured: false },
         { name: "קורס ליווי",    price: "$1,400",  period: "· 5 שבועות", description: "אם רוצים שינויים עמוקים ויציבים ותמיכה לאורך כל הדרך.", features: ["3 ייעוצים בזום","תוכנית אישית ל-5 שבועות","חבילת טכניקות עזרה עצמית אישית","מעקב יומיומי אחר השינויים","ניתוח מעמיק של דפוסים","בניית מערכתיות ותחזוקתה","שאלות ותשובות בצ׳אט אישי"], featured: true },
       ],
-      after: "לא בטוחים מה לבחור? התחילו עם ייעוץ אבחוני בחינם. 30 דקות ותבינו מה קורה ומה לעשות עם זה.",
+      after: "לא בטוחים מה לבחור? התחילו עם ייעוץ אבחוני ללא עלות. 30 דקות ותבינו מה קורה ומה לעשות עם זה.",
       afterCta: "לקביעת ייעוץ אבחוני",
     },
     reviews: {
@@ -262,10 +262,10 @@ const C = {
       title: "שאלות שנשאלות הכי הרבה",
       items: [
         { q: "איך מתנהל הייעוץ?",                              a: "הפגישה בזום. לפני שמתחילים אני מבקשת לתאר בקצרה את המצב, כדי לבוא מוכנה. בייעוץ עצמו אנחנו מנתחים מצב קונקרטי מהחיים שלכם, מזהים את הקשיים המרכזיים וקובעים צעדים מעשיים. זה לא שיחה \"על גידול ילדים בכלל\". זו עבודה עם המציאות שלכם." },
-        { q: "האם זה יעזור למשפחה שלי?",                     a: "תשובה כנה: לא יודעת לפני שנדבר. בדיוק בגלל זה יש ייעוץ אבחוני חינם, כדי שתוכלו להבין אם הגישה הזו מתאימה לכם. מה שיכולה לומר בוודאות: אני עובדת עם מצבים אמיתיים, לא עם תיאוריה. ואני עובדת רק עם משפחות שאני יכולה באמת לעזור להן." },
+        { q: "האם זה יעזור למשפחה שלי?",                     a: "תשובה כנה: לא יודעת לפני שנדבר. בדיוק בגלל זה יש ייעוץ אבחוני ללא עלות, כדי שתוכלו להבין אם הגישה הזו מתאימה לכם. מה שיכולה לומר בוודאות: אני עובדת עם מצבים אמיתיים, לא עם תיאוריה. ואני עובדת רק עם משפחות שאני יכולה באמת לעזור להן." },
         { q: "האם הילד צריך להשתתף?",                         a: "לא. אני עובדת רק עם הורים. הילד לא משתתף בייעוצים, אבל דרך השינויים בהתנהגות שלכם, גם הוא משתנה." },
         { q: "מתי יורגשו תוצאות?",                            a: "שינויים ראשונים הורים רבים מרגישים כבר אחרי הייעוץ הראשון. מופיעה בהירות וכלים קונקרטיים. שינויים יציבים הם תהליך. בדרך כלל משפחות רואות התקדמות אמיתית תוך מספר שבועות של תרגול. אני לא מבטיחה נסים מהירים. אני מבטיחה עבודה כנה." },
-        { q: "אני לא גרה בישראל. אפשר לעבוד?",              a: "כן. כל הפורמטים אונליין. עובדת עם משפחות דוברות רוסית מארצות שונות." },
+        { q: "אני לא גרה בישראל. אפשר לעבוד?",              a: "כן. כל החבילות אונליין. עובדת עם משפחות דוברות רוסית מארצות שונות." },
         { q: "אני חוששת שבלי צעקות הילד יפסיק לשמוע.",      a: "זהו אחד הפחדים הנפוצים ביותר, ומובן לחלוטין. נעסוק בו ישירות בעבודה. גבולות ברורים וטון מכבד אלה לא סתירה. ילדים שומעים טוב יותר הורים שלא צועקים." },
         { q: "איך נרשמים?",                                   a: "דרך וואטסאפ. כתבו לי, אענה תוך 24 שעות ואציע זמן לייעוץ אבחוני." },
       ],
@@ -274,7 +274,7 @@ const C = {
       eyebrow: "צרו קשר",
       title: "התחילו את הדרך לחיי משפחה שקטים",
       text: "שינויים נולדים במקום שיש בו תמיכה ויושר עם עצמך.",
-      text2: "צרו איתי קשר בוואטסאפ לקביעת ייעוץ אבחוני בחינם.",
+      text2: "צרו איתי קשר בוואטסאפ לקביעת ייעוץ אבחוני ללא עלות.",
       final: "אתם לא חייבים להסתדר לבד.",
       buttons: [
         { label: "לכתוב בוואטסאפ", href: "https://wa.me/972524548345", primary: true },
@@ -597,46 +597,66 @@ export default function Page() {
       {/* ══ FORMATS ══ */}
       <section id="services" style={{ padding: "clamp(52px,8vw,96px) 0", background: "#fffaf0" }}>
         <div style={mw}>
-          <div className="io-up" style={{ maxWidth: 680, marginBottom: "clamp(26px,4vw,40px)" }}>
-            <h2 style={{ margin: "0 0 8px", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(30px,4.8vw,46px)", lineHeight: 1.06, letterSpacing: "-1.4px", color: "#0a0a0a" }}>{t.formats.title}</h2>
-            <p style={{ margin: "0 0 14px", fontSize: 17, lineHeight: 1.5, color: "#6a6a6a" }}>{t.formats.subtitle}</p>
-            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, color: "#5a5a5a" }}>{t.formats.before}</p>
+          <div className="io-up" style={{ display: "flex", textAlign: "center", justifyContent: "center", alignItems: "center", gap: 16, flexDirection: "column", marginBottom: "clamp(40px,6vw,60px)" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", padding: "4px 12px", background: "rgba(26,58,58,0.06)", color: "#1a3a3a", borderRadius: 100, fontSize: 13, fontWeight: 600, letterSpacing: "0.5px", textTransform: "uppercase" }}>
+              {t.formats.eyebrow}
+            </div>
+            <div style={{ display: "flex", gap: 8, flexDirection: "column", maxWidth: 680 }}>
+              <h2 style={{ margin: 0, fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 400, fontSize: "clamp(32px,5vw,52px)", lineHeight: 1.1, letterSpacing: "-1px", color: "#0a0a0a" }}>
+                {t.formats.title}
+              </h2>
+              <p style={{ margin: 0, fontSize: 18, lineHeight: 1.6, color: "#6a6a6a" }}>
+                {t.formats.subtitle} {t.formats.before}
+              </p>
+            </div>
           </div>
-          <div ref={carouselRef} className="pricing-carousel" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(282px,1fr))", gap: 20, alignItems: "stretch" }}>
+          
+          <div className="pricing-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 32, alignItems: "stretch", textAlign: isHe ? "right" : "left" }}>
             {t.formats.cards.map((card, i) => (
               <div key={i} className="pricing-card-slot" style={{ position: "relative" }}>
-                {i === 2 && (
-                  <div style={{ position: "absolute", top: -13, insetInlineStart: 24, zIndex: 2 }}>
-                    <Badge tone="ochre" uppercase>{t.formats.recommendedLabel}</Badge>
+                <div className={`io-card pricing-highlight ${card.featured ? "pricing-featured" : ""}`} style={{ background: "#ffffff", border: card.featured ? "none" : "1px solid #efe7d6", borderRadius: 12, padding: "32px", display: "flex", flexDirection: "column", height: "100%", boxShadow: card.featured ? "0 20px 40px rgba(10,10,10,0.12)" : "0 2px 8px rgba(10,10,10,0.04)", "--d": `${i * 90}ms` } as React.CSSProperties}>
+                  
+                  <div style={{ marginBottom: 24 }}>
+                    <h3 style={{ margin: "0 0 8px", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 400, fontSize: 24, display: "flex", alignItems: "center", gap: 12, color: "#0a0a0a" }}>
+                      {card.name} 
+                      {card.featured && <span style={{ background: "#f4ead8", color: "#b07a4a", fontSize: 12, padding: "2px 8px", borderRadius: 100, fontWeight: 600 }}>{t.formats.recommendedLabel}</span>}
+                    </h3>
+                    <p style={{ margin: 0, fontSize: 14, lineHeight: 1.5, color: "#6a6a6a" }}>{card.description}</p>
                   </div>
-                )}
-                <div className="io-card pricing-highlight" style={{ background: "#fffaf0", border: "1px solid #efe7d6", borderRadius: 20, padding: "28px 26px", display: "flex", flexDirection: "column", height: "100%", "--d": `${i * 90}ms` } as React.CSSProperties}>
-                  <p className="card-price" style={{ margin: "0 0 2px", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(28px,4vw,36px)", letterSpacing: "-1px", color: "#0a0a0a", lineHeight: 1.1 }}>
-                    {card.price}<span className="card-period" style={{ fontSize: 15, fontWeight: 400, color: "#8a8a8a", letterSpacing: 0 }}>{" "}{card.period}</span>
-                  </p>
-                  <div className="divider" style={{ borderTop: "1px solid #efe7d6", margin: "18px 0" }} />
-                  <p className="card-name" style={{ margin: "0 0 8px", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: 18, letterSpacing: "-0.3px", color: "#0a0a0a" }}>{card.name}</p>
-                  <p className="card-desc" style={{ margin: "0 0 20px", fontSize: 14, lineHeight: 1.55, color: "#6a6a6a" }}>{card.description}</p>
-                  <ul style={{ listStyle: "none", margin: "0 0 24px", padding: 0, display: "flex", flexDirection: "column", gap: 10, flex: 1 }}>
-                    {card.features.map(f => (
-                      <li key={f} className="feature-item" style={{ display: "flex", gap: 10, alignItems: "flex-start", fontSize: 14, lineHeight: 1.5, color: "#3a3a3a" }}>
-                        <span className="check-circle" style={{ flexShrink: 0, width: 18, height: 18, borderRadius: "50%", background: "#d8ece3", color: "#2f7a5e", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 11, marginTop: 1 }}>✓</span>{f}
-                      </li>
-                    ))}
-                  </ul>
-                  <a href="#contacts" className="btn-cta" style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "12px 20px", borderRadius: 100, fontSize: 15, fontWeight: 600, textDecoration: "none", background: "transparent", color: "#0a0a0a", border: "1.5px solid rgba(10,10,10,0.22)", cursor: "pointer", fontFamily: "var(--font-inter,sans-serif)" }}>{t.formats.formatCta}</a>
+                  
+                  <div style={{ marginBottom: 32 }}>
+                    <p className="card-price" style={{ margin: 0, fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 400, fontSize: 42, color: "#0a0a0a", display: "flex", alignItems: "baseline", gap: 8 }}>
+                      {card.price}<span className="card-period" style={{ fontSize: 14, fontWeight: 400, color: "#8a8a8a" }}>{card.period}</span>
+                    </p>
+                  </div>
+
+                  <div style={{ flex: 1, marginBottom: 32 }}>
+                    <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 16 }}>
+                      {card.features.map(f => (
+                        <li key={f} className="feature-item" style={{ display: "flex", gap: 12, alignItems: "flex-start", fontSize: 15, lineHeight: 1.5, color: "#3a3a3a" }}>
+                          <span className="check-circle" style={{ flexShrink: 0, marginTop: 2 }}>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2f7a5e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                          </span>
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <a href="#contacts" className={`btn ${card.featured ? "btn-primary" : "btn-secondary"}`} style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "14px 20px", borderRadius: 8, fontSize: 15, fontWeight: 500, textDecoration: "none", width: "100%", gap: 8, fontFamily: "var(--font-inter,sans-serif)", background: card.featured ? "#1a3a3a" : "transparent", color: card.featured ? "#fff" : "#0a0a0a", border: card.featured ? "none" : "1.5px solid rgba(10,10,10,0.22)", transition: "opacity 0.2s" }} onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.8")} onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}>
+                    {t.formats.formatCta} 
+                    {isHe ? <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transform: "rotate(180deg)" }}><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> : <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>}
+                  </a>
                 </div>
               </div>
             ))}
           </div>
-          <div className="pricing-dots" aria-hidden="true">
-            {t.formats.cards.map((_, i) => (
-              <span key={i} className={`pricing-dot${activeDot === i ? " active" : ""}`} />
-            ))}
-          </div>
-          <div style={{ marginTop: 34, display: "flex", flexWrap: "wrap", alignItems: "center", gap: 18, background: "#fffaf0", border: "1px solid #efe7d6", borderRadius: 18, padding: "24px 28px" }}>
-            <p style={{ margin: 0, flex: "1 1 320px", fontSize: 16, lineHeight: 1.55, color: "#3a3a3a" }}>{t.formats.after}</p>
-            <a href="#contacts" className="btn btn-primary btn-lg">{t.formats.afterCta}</a>
+
+          <div style={{ marginTop: 40, textAlign: "center" }}>
+            <p style={{ margin: "0 0 16px", fontSize: 16, color: "#6a6a6a" }}>{t.formats.after}</p>
+            <a href="#contacts" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 16, fontWeight: 500, color: "#0a0a0a", textDecoration: "underline", textUnderlineOffset: 4, cursor: "pointer" }} onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")} onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}>
+              {t.formats.afterCta}
+            </a>
           </div>
         </div>
       </section>

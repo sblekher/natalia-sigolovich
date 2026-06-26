@@ -414,9 +414,20 @@ export default function Page() {
     const el = carouselRef.current;
     if (!el) return;
     const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const idx = max > 0 ? Math.round((Math.abs(el.scrollLeft) / max) * 2) : 0;
-      setActiveDot(Math.min(2, Math.max(0, idx)));
+      const containerRect = el.getBoundingClientRect();
+      const containerCenter = containerRect.left + containerRect.width / 2;
+      let closestIdx = 0;
+      let minDistance = Infinity;
+      Array.from(el.children).forEach((child, i) => {
+        const rect = child.getBoundingClientRect();
+        const center = rect.left + rect.width / 2;
+        const distance = Math.abs(containerCenter - center);
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestIdx = i;
+        }
+      });
+      setActiveDot(closestIdx);
     };
     el.addEventListener("scroll", onScroll, { passive: true });
     return () => el.removeEventListener("scroll", onScroll);
@@ -458,7 +469,7 @@ export default function Page() {
     <div dir={isHe ? "rtl" : "ltr"} style={{ direction: isHe ? "rtl" : "ltr", fontFamily: "var(--font-inter,sans-serif)" }}>
 
       {/* ══ HEADER ══ */}
-      <header className={`ns-header ${isScrolled ? "scrolled" : "top"}`}>
+      <header className={`ns-header ${isScrolled ? "scrolled" : "top"} ${mobileOpen ? "menu-open" : ""}`}>
         <div style={{ ...mw, height: 70, display: "flex", alignItems: "center", gap: 22 }}>
           <a href="#top" style={{ display: "flex", alignItems: "center", gap: 9, textDecoration: "none" }}>
             <span style={{ width: 13, height: 13, borderRadius: "50%", background: "#ffb084", boxShadow: "inset -3px -3px 6px rgba(10,10,10,0.18)", flexShrink: 0 }} />
@@ -482,14 +493,18 @@ export default function Page() {
           </div>
         </div>
         {mobileOpen && (
-          <div style={{ borderTop: "1px solid rgba(10,10,10,0.06)", background: "#fffaf0", padding: `14px ${px} 22px` }}>
-            <nav style={{ display: "flex", flexDirection: "column" }}>
+          <div className="mobile-menu-overlay" style={{ 
+            position: "absolute", top: 70, left: 0, right: 0, height: "calc(100dvh - 70px)", 
+            background: "#fffaf0", padding: `40px ${px} 40px`, zIndex: 40,
+            display: "flex", flexDirection: "column", alignItems: "center", overflowY: "auto"
+          }}>
+            <nav style={{ display: "flex", flexDirection: "column", gap: 36, alignItems: "center", width: "100%" }}>
               {t.nav.links.map(l => (
-                <a key={l.href} href={l.href} onClick={() => setMobileOpen(false)} style={{ fontSize: 16, fontWeight: 500, color: "#1a1a1a", padding: "13px 4px", textDecoration: "none", borderBottom: "1px solid rgba(10,10,10,0.05)" }}>{l.label}</a>
+                <a key={l.href} href={l.href} onClick={() => setMobileOpen(false)} style={{ fontSize: 24, fontWeight: 500, color: "#1a1a1a", textDecoration: "none" }}>{l.label}</a>
               ))}
             </nav>
-            <div style={{ marginTop: 16 }}>
-              <a href="#contacts" className="btn btn-primary btn-md" style={{ width: "100%", textAlign: "center" }} onClick={() => setMobileOpen(false)}>{t.nav.cta}</a>
+            <div style={{ marginTop: 52, width: "100%", maxWidth: 280 }}>
+              <a href="#contacts" className="btn btn-primary btn-lg" style={{ width: "100%", textAlign: "center", display: "block" }} onClick={() => setMobileOpen(false)}>{t.nav.cta}</a>
             </div>
           </div>
         )}
@@ -505,23 +520,14 @@ export default function Page() {
             <a href="#contacts" className="btn btn-primary btn-lg hero-cta" style={{ marginBottom: 16 }}>{t.hero.cta}</a>
             <p className="hero-micro" style={{ margin: 0, fontSize: 13, color: "rgb(140,130,115)" }}>{t.hero.reassurance}</p>
           </div>
-          <div className="hero-photo-reveal hero-slot">
-            <div className="illustration-breathe hero-illus">
-              <Image src="/family-illustration.png" alt="Иллюстрация семьи с детьми" width={819} height={1024} sizes="(max-width: 768px) 86vw, 580px" priority style={{ width: "100%", height: "auto", display: "block" }} />
-            </div>
+          <div className="hero-slot">
+            {/* Empty slot for the 2-column grid. The background image handles the photo. */}
           </div>
-        </div>
-        
-        {/* Scroll Indicator (Mobile only) */}
-        <div className="scroll-indicator-mobile">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 5v14M19 12l-7 7-7-7" />
-          </svg>
         </div>
       </section>
 
       {/* ══ REQUESTS ══ */}
-      <section className="requests-section" style={{ padding: "clamp(52px,8vw,96px) 0", background: "#e6f5f1" }}>
+      <section className="requests-section" style={{ padding: "clamp(40px,6vw,72px) 0", background: "#e6f5f1" }}>
         <div style={mw}>
           <div className="io-up" style={{ maxWidth: 620, marginBottom: "clamp(28px,4vw,44px)" }}>
             <RubikH2>{t.requests.title}</RubikH2>
@@ -583,7 +589,7 @@ export default function Page() {
       </section>
 
       {/* ══ CHANGES ══ */}
-      <section style={{ padding: "clamp(52px,8vw,96px) 0", background: "#fffaf0" }}>
+      <section style={{ padding: "clamp(40px,6vw,72px) 0", background: "#fffaf0" }}>
         <div style={mw}>
           <div className="io-up" style={{ maxWidth: 640, marginBottom: "clamp(28px,4vw,44px)" }}>
             <RubikH2>{t.changes.title}</RubikH2>
@@ -602,14 +608,14 @@ export default function Page() {
 
 
       {/* ══ FORMATS ══ */}
-      <section id="services" style={{ padding: "clamp(52px,8vw,96px) 0", background: "#fffaf0" }}>
+      <section id="services" style={{ padding: "clamp(40px,6vw,72px) 0", background: "#fffaf0" }}>
         <div style={mw}>
           <div className="io-up" style={{ maxWidth: 680, marginBottom: "clamp(26px,4vw,40px)" }}>
             <h2 style={{ margin: "0 0 8px", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(30px,4.8vw,46px)", lineHeight: 1.06, letterSpacing: "-1.4px", color: "#0a0a0a" }}>{t.formats.title}</h2>
             <p style={{ margin: "0 0 14px", fontSize: 17, lineHeight: 1.5, color: "#6a6a6a" }}>{t.formats.subtitle}</p>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, color: "#5a5a5a" }}>{t.formats.before}</p>
           </div>
-          <div ref={carouselRef} className="pricing-carousel" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(282px,1fr))", gap: 20, alignItems: "stretch" }}>
+          <div ref={carouselRef} className="pricing-carousel" style={{ maxWidth: 1040, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(230px,1fr))", gap: 20, alignItems: "stretch" }}>
             {t.formats.cards.map((card, i) => (
               <div key={i} className="pricing-card-slot" style={{ position: "relative" }}>
                 {i === 2 && (
@@ -649,7 +655,7 @@ export default function Page() {
       </section>
 
       {/* ══ REVIEWS ══ */}
-      <section id="reviews" style={{ padding: "clamp(56px,9vw,104px) 0" }}>
+      <section id="reviews" style={{ padding: "clamp(44px,7vw,80px) 0" }}>
         <div style={mw}>
           <div className="io-up" style={{ maxWidth: 640, marginBottom: "clamp(28px,4vw,44px)" }}>
             <h2 style={{ margin: "0 0 0", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(30px,4.8vw,46px)", lineHeight: 1.06, letterSpacing: "-1.4px", color: "#0a0a0a" }}>{t.reviews.title}</h2>
@@ -695,7 +701,7 @@ export default function Page() {
       </section>
 
       {/* ══ FAQ ══ */}
-      <section id="faq" style={{ padding: "clamp(52px,8vw,96px) 0", background: "#fffaf0" }}>
+      <section id="faq" style={{ padding: "clamp(40px,6vw,72px) 0", background: "#fffaf0" }}>
         <div style={{ maxWidth: 800, margin: "0 auto", paddingLeft: px, paddingRight: px }}>
           <div className="io-up" style={{ marginBottom: "clamp(26px,4vw,40px)" }}>
             <RubikH2>{t.faq.title}</RubikH2>
@@ -718,7 +724,7 @@ export default function Page() {
       </section>
 
       {/* ══ CONTACTS ══ */}
-      <section id="contacts" style={{ padding: "clamp(56px,9vw,108px) 0" }}>
+      <section id="contacts" style={{ padding: "clamp(48px,7vw,88px) 0" }}>
         <div style={mw}>
           <div style={{ position: "relative", overflow: "hidden", background: "#fffaf0", border: "1px solid #efe7d6", borderRadius: 28, padding: "clamp(36px,6vw,72px) clamp(28px,5vw,64px)", textAlign: "center" }}>
             <div className="blob-b" style={{ position: "absolute", top: -34, insetInlineStart: -24, width: 130, height: 130, background: "#ffb084", opacity: 0.6, borderRadius: "50%", boxShadow: "inset -8px -10px 18px rgba(10,10,10,0.12)" }} />

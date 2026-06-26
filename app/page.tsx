@@ -423,6 +423,13 @@ export default function Page() {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [rvActive, setRvActive] = useState(0);
   const rvScrollRef = useRef<HTMLDivElement>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     let l: Lang = "ru";
@@ -512,11 +519,11 @@ export default function Page() {
     <div dir={isHe ? "rtl" : "ltr"} style={{ direction: isHe ? "rtl" : "ltr", fontFamily: "var(--font-inter,sans-serif)" }}>
 
       {/* ══ HEADER ══ */}
-      <header style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(255,250,240,0.86)", backdropFilter: "blur(10px)", borderBottom: "1px solid rgba(10,10,10,0.06)" }}>
+      <header className={`ns-header ${isScrolled ? "scrolled" : "top"}`}>
         <div style={{ ...mw, height: 70, display: "flex", alignItems: "center", gap: 22 }}>
           <a href="#top" style={{ display: "flex", alignItems: "center", gap: 9, textDecoration: "none" }}>
             <span style={{ width: 13, height: 13, borderRadius: "50%", background: "#ffb084", boxShadow: "inset -3px -3px 6px rgba(10,10,10,0.18)", flexShrink: 0 }} />
-            <span style={{ fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: 17, letterSpacing: "-0.3px", color: "#0a0a0a" }}>{t.brand}</span>
+            <span className="brand-text" style={{ fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: 17, letterSpacing: "-0.3px" }}>{t.brand}</span>
           </a>
           <nav className="ns-nav-desktop" style={{ display: "flex", gap: 2, flex: 1, justifyContent: "center" }}>
             {t.nav.links.map(l => (
@@ -525,13 +532,13 @@ export default function Page() {
           </nav>
           <div style={{ display: "flex", alignItems: "center", gap: 14, marginInlineStart: "auto" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <button onClick={() => switchLang("ru")} aria-pressed={!isHe} aria-label="Русский язык" style={{ fontSize: 14, fontWeight: isHe ? 500 : 700, color: isHe ? "#9a9a9a" : "#0a0a0a", cursor: "pointer", background: "none", border: "none", padding: 0, fontFamily: "inherit" }}>RU</button>
-              <span style={{ fontSize: 13, color: "#c8c2b4" }} aria-hidden="true">|</span>
-              <button onClick={() => switchLang("he")} aria-pressed={isHe} aria-label="עברית" style={{ fontSize: 15, fontWeight: isHe ? 700 : 500, color: isHe ? "#0a0a0a" : "#9a9a9a", cursor: "pointer", background: "none", border: "none", padding: 0, fontFamily: "inherit" }}>עב</button>
+              <button onClick={() => switchLang("ru")} aria-pressed={!isHe} aria-label="Русский язык" className={!isHe ? "lang-btn-active" : "lang-btn-inactive"} style={{ fontSize: 14, fontWeight: isHe ? 500 : 700, cursor: "pointer", background: "none", border: "none", padding: 0, fontFamily: "inherit" }}>RU</button>
+              <span className="lang-divider" style={{ fontSize: 13 }} aria-hidden="true">|</span>
+              <button onClick={() => switchLang("he")} aria-pressed={isHe} aria-label="עברית" className={isHe ? "lang-btn-active" : "lang-btn-inactive"} style={{ fontSize: 15, fontWeight: isHe ? 700 : 500, cursor: "pointer", background: "none", border: "none", padding: 0, fontFamily: "inherit" }}>עב</button>
             </div>
             <span className="ns-hide-sm"><a href="#contacts" className="btn btn-primary btn-sm">{t.nav.cta}</a></span>
-            <button className="ns-burger" onClick={() => setMobileOpen(v => !v)} aria-label={isHe ? (mobileOpen ? "סגור תפריט" : "פתח תפריט") : (mobileOpen ? "Закрыть меню" : "Открыть меню")} aria-expanded={mobileOpen} style={{ display: "none", alignItems: "center", justifyContent: "center", width: 40, height: 40, border: "1px solid rgba(10,10,10,0.1)", background: "#fffaf0", borderRadius: 10, cursor: "pointer", padding: 0 }}>
-              <span style={{ display: "block", width: 18, height: 2, background: "#0a0a0a", boxShadow: "0 -5px 0 #0a0a0a, 0 5px 0 #0a0a0a" }} />
+            <button className="ns-burger" onClick={() => setMobileOpen(v => !v)} aria-label={isHe ? (mobileOpen ? "סגור תפריט" : "פתח תפריט") : (mobileOpen ? "Закрыть меню" : "Открыть меню")} aria-expanded={mobileOpen} style={{ display: "none", alignItems: "center", justifyContent: "center", width: 40, height: 40, borderRadius: 10, cursor: "pointer", padding: 0 }}>
+              <span style={{ display: "block", width: 18, height: 2 }} />
             </button>
           </div>
         </div>

@@ -571,7 +571,6 @@ export default function Page() {
       <section className="requests-section" style={{ padding: "clamp(52px,8vw,96px) 0", background: "#e6f5f1" }}>
         <div style={mw}>
           <div className="io-up" style={{ maxWidth: 620, marginBottom: "clamp(28px,4vw,44px)" }}>
-            <Eyebrow>{t.requests.eyebrow}</Eyebrow>
             <RubikH2>{t.requests.title}</RubikH2>
           </div>
           <div className="requests-cards">
@@ -639,7 +638,6 @@ export default function Page() {
       <section style={{ padding: "clamp(52px,8vw,96px) 0", background: "#fffaf0" }}>
         <div style={mw}>
           <div className="io-up" style={{ maxWidth: 640, marginBottom: "clamp(28px,4vw,44px)" }}>
-            <Eyebrow>{t.changes.eyebrow}</Eyebrow>
             <RubikH2>{t.changes.title}</RubikH2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(244px,1fr))", gap: 18 }}>
@@ -659,8 +657,7 @@ export default function Page() {
         <div style={mw}>
           {/* Section header */}
           <div className="io-up" style={{ maxWidth: 680, marginBottom: "clamp(32px,5vw,52px)", textAlign: "start" }}>
-            <Eyebrow>{t.approach.eyebrow}</Eyebrow>
-            <h2 style={{ margin: "12px 0 0", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(28px,4.8vw,46px)", lineHeight: 1.08, letterSpacing: "-1.2px", color: "#0a0a0a", textAlign: "start" }}>{t.approach.title}</h2>
+            <h2 style={{ margin: "0 0 0", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(28px,4.8vw,46px)", lineHeight: 1.08, letterSpacing: "-1.2px", color: "#0a0a0a", textAlign: "start" }}>{t.approach.title}</h2>
           </div>
 
           {/* Lead dark card */}
@@ -690,8 +687,7 @@ export default function Page() {
       <section id="services" style={{ padding: "clamp(52px,8vw,96px) 0", background: "#fffaf0" }}>
         <div style={mw}>
           <div className="io-up" style={{ maxWidth: 680, marginBottom: "clamp(26px,4vw,40px)" }}>
-            <Eyebrow>{t.formats.eyebrow}</Eyebrow>
-            <h2 style={{ margin: "12px 0 8px", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(30px,4.8vw,46px)", lineHeight: 1.06, letterSpacing: "-1.4px", color: "#0a0a0a" }}>{t.formats.title}</h2>
+            <h2 style={{ margin: "0 0 8px", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(30px,4.8vw,46px)", lineHeight: 1.06, letterSpacing: "-1.4px", color: "#0a0a0a" }}>{t.formats.title}</h2>
             <p style={{ margin: "0 0 14px", fontSize: 17, lineHeight: 1.5, color: "#6a6a6a" }}>{t.formats.subtitle}</p>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, color: "#5a5a5a" }}>{t.formats.before}</p>
           </div>
@@ -738,8 +734,7 @@ export default function Page() {
       <section id="reviews" style={{ padding: "clamp(56px,9vw,104px) 0" }}>
         <div style={mw}>
           <div className="io-up" style={{ maxWidth: 640, marginBottom: "clamp(28px,4vw,44px)" }}>
-            <Eyebrow>{t.reviews.eyebrow}</Eyebrow>
-            <h2 style={{ margin: "12px 0 0", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(30px,4.8vw,46px)", lineHeight: 1.06, letterSpacing: "-1.4px", color: "#0a0a0a" }}>{t.reviews.title}</h2>
+            <h2 style={{ margin: "0 0 0", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(30px,4.8vw,46px)", lineHeight: 1.06, letterSpacing: "-1.4px", color: "#0a0a0a" }}>{t.reviews.title}</h2>
           </div>
           {/* carousel — scroll-snap horizontal, always on mobile, on desktop when >3 items */}
           <div style={{ position: "relative" }}>
@@ -785,7 +780,6 @@ export default function Page() {
       <section id="faq" style={{ padding: "clamp(52px,8vw,96px) 0", background: "#fffaf0" }}>
         <div style={{ maxWidth: 800, margin: "0 auto", paddingLeft: px, paddingRight: px }}>
           <div className="io-up" style={{ marginBottom: "clamp(26px,4vw,40px)" }}>
-            <Eyebrow>{t.faq.eyebrow}</Eyebrow>
             <RubikH2>{t.faq.title}</RubikH2>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -812,8 +806,7 @@ export default function Page() {
             <div className="blob-b" style={{ position: "absolute", top: -34, insetInlineStart: -24, width: 130, height: 130, background: "#ffb084", opacity: 0.6, borderRadius: "50%", boxShadow: "inset -8px -10px 18px rgba(10,10,10,0.12)" }} />
             <div className="blob-a" style={{ position: "absolute", bottom: -40, insetInlineEnd: 30, width: 110, height: 110, background: "#a4d4c5", opacity: 0.6, borderRadius: "50% / 58% 56% 44% 42%", boxShadow: "inset -8px -10px 18px rgba(10,10,10,0.1)" }} />
             <div className="io-up" style={{ position: "relative", zIndex: 2, maxWidth: 680, margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center" }}>
-              <Eyebrow>{t.contacts.eyebrow}</Eyebrow>
-              <h2 style={{ margin: "14px 0 0", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(30px,5vw,48px)", lineHeight: 1.05, letterSpacing: "-1.6px", color: "#0a0a0a" }}>{t.contacts.title}</h2>
+              <h2 style={{ margin: "0 0 0", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(30px,5vw,48px)", lineHeight: 1.05, letterSpacing: "-1.6px", color: "#0a0a0a" }}>{t.contacts.title}</h2>
               <p style={{ margin: "18px 0 0", fontSize: 18, lineHeight: 1.55, color: "#3a3a3a" }}>{t.contacts.text}</p>
               <p style={{ margin: "10px 0 0", fontSize: 16, lineHeight: 1.55, color: "#6a6a6a" }}>{t.contacts.text2}</p>
               <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12, marginTop: 30 }}>

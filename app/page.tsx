@@ -601,7 +601,7 @@ export default function Page() {
             {/* Left Column (Photo & Name) */}
             <div className="about-left io-up">
               <div className="about-eyebrow about-eyebrow-left">
-                <Eyebrow>{t.about.eyebrow}</Eyebrow>
+                <h2 style={{ margin: 0, fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(28px,4.4vw,42px)", lineHeight: 1.1, letterSpacing: "-1.2px", color: "#0a0a0a" }}>{t.about.eyebrow}</h2>
               </div>
               <div className="about-photo-wrapper">
                 <div className="about-blob-top-right" />
@@ -616,9 +616,9 @@ export default function Page() {
             {/* Right Column (Text & Card) */}
             <div className="about-right io-up" style={{ "--d": "100ms" } as React.CSSProperties}>
               <div className="about-eyebrow about-eyebrow-right">
-                <Eyebrow>{t.about.eyebrow}</Eyebrow>
+                <h2 style={{ margin: 0, fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(28px,4.4vw,42px)", lineHeight: 1.1, letterSpacing: "-1.2px", color: "#0a0a0a" }}>{t.about.eyebrow}</h2>
               </div>
-              <h2 className="about-name-right" style={{ margin: "10px 0 24px", fontFamily: "var(--font-rubik,sans-serif)", fontWeight: 500, fontSize: "clamp(28px,4.4vw,42px)", lineHeight: 1.1, letterSpacing: "-1.2px", color: "#0a0a0a" }}>{t.about.title}</h2>
+              <p className="about-name-right" style={{ margin: "10px 0 24px", fontSize: 17, lineHeight: 1.65, color: "#4a4a4a", fontFamily: "var(--font-rubik,sans-serif)" }}>{t.about.title}</p>
               <div className="about-bio">
                 {t.about.who.map((p, i) => <p key={i}>{p}</p>)}
               </div>

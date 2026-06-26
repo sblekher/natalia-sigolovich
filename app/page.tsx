@@ -600,6 +600,9 @@ export default function Page() {
             
             {/* Left Column (Photo & Name) */}
             <div className="about-left io-up">
+              <div className="about-eyebrow about-eyebrow-left">
+                <Eyebrow>{t.about.eyebrow}</Eyebrow>
+              </div>
               <div className="about-photo-wrapper">
                 <div className="about-blob-top-right" />
                 <div className="about-blob-bottom-left" />
@@ -608,26 +611,17 @@ export default function Page() {
                 </div>
               </div>
               <h2 className="about-name">{t.about.title}</h2>
-              <p className="about-subtitle">{t.about.subtitle}</p>
             </div>
             
             {/* Right Column (Text & Card) */}
             <div className="about-right io-up" style={{ "--d": "100ms" } as React.CSSProperties}>
-              <div className="about-eyebrow">
+              <div className="about-eyebrow about-eyebrow-right">
                 <Eyebrow>{t.about.eyebrow}</Eyebrow>
               </div>
               <div className="about-bio">
                 {t.about.who.map((p, i) => <p key={i}>{p}</p>)}
               </div>
               
-              <div className="about-why-card">
-                <h3>{t.about.whyTitle}</h3>
-                {t.about.why.map((p, i) => <p key={i}>{p}</p>)}
-              </div>
-              
-              <div className="about-badges">
-                {t.about.facts.map(f => <Badge key={f.label} tone={f.tone}>{f.label}</Badge>)}
-              </div>
             </div>
 
           </div>
